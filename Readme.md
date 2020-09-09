@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Павел Рахманкулов](https://up.htmlacademy.ru/htmlcss/29/user/1054761).
-* Наставник: [Ярослав Косович] (https://htmlacademy.ru/profile/id703025).
+* Наставник: [Ярослав Косович](https://htmlacademy.ru/profile/id703025).
 
 ---
 
