@@ -19,10 +19,13 @@
             </a>
             <form class="header-search" action="#" method="POST">
               <label class="visually-hidden" for="site-search">Поиск товаров по сайту</label>
-              <input class="main-search" type="search" name="site-search" id="site-search" placeholder="Поиск">
+              <input class="main-search" type="search" name="site-search" id="site-search" placeholder="Поиск:">
+              <svg class="search-icon" width="17" height="17">
+                <path class="search-icon-action"  fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff"/>
+              </svg>
             </form>
-            <a href="#" class="order-info-link">Закладки: 0</a>
-            <a href="#" class="order-info-link">Корзина: 0</a>
+            <a href="#" class="order-info-link bookmarks-link">Закладки: 0</a>
+            <a href="#" class="order-info-link cart-link">Корзина: 0</a>
             <a href="#" class="order-info-link order-link">Оформить заказ</a>
           </div>
         </div>
@@ -39,19 +42,27 @@
                 <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
               </div>
               <div class="login-wrapper">
-                <a href="#" class="profile-link profile-link-action user-login">Войти</a>
+                <a href="#" class="profile-link profile-link-action user-login">
+                  Войти
+                  <svg class="login-icon" width="21" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="login-icon" d="M14.88 8.5L6 0v6H0v5h6v6l8.88-8.5z" fill="#C5C5C5"/>
+                    <path class="login-icon" d="M16.99 15.01h-5.03V17h5.03c2.17 0 3-1.81 3.03-3.03V3.03C19.98 1.8 19.16 0 16.98 0h-5.03v1.99h5.03c.84 0 .99.68 1 1.06v10.9c-.01.38-.16 1.06-1 1.06z" fill="#C5C5C5"/>
+                  </svg>
+                </a>
                 <a href="#" class="profile-link profile-link-action user-register">Регистрация</a>
               </div>
             </div>
-            <ul class="site-nav-bottom">
-              <li class="site-nav-bottom-item"><a class="site-nav-bottom-link site-nav-current-page">Главная</a></li>
-              <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Компания</a></li>
-              <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="catalog.html">Каталог</a></li>
-              <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Новости</a></li>
-              <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Спецпредложения</a></li>
-              <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Доставка</a></li>
-              <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Контакты</a></li>
-            </ul>
+            <div class="site-nav-bottom-wrapper">
+              <ul class="site-nav-bottom">
+                <li class="site-nav-bottom-item"><a class="site-nav-bottom-link site-nav-current-page">Главная</a></li>
+                <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Компания</a></li>
+                <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="catalog.html">Каталог</a></li>
+                <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Новости</a></li>
+                <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Спецпредложения</a></li>
+                <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Доставка</a></li>
+                <li class="site-nav-bottom-item"><a class="site-nav-bottom-link" href="#">Контакты</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -85,8 +96,8 @@
         </ul>
         <div class="main-slider">
           <ul class="slides-list">
-            <li class="slide-item">
-              <div class="background-wrapper">
+            <li class="slide-item main-slide-current">
+              <div class="main-slider-background-wrapper">
                 <h3 class="slide-item-title">
                   Перфораторы
                 </h3>
@@ -97,7 +108,7 @@
               <a class="button main-slider-button" href="catalog.html">Открыть каталог</a>
             </li>
             <li class="slide-item">
-              <div class="background-wrapper">
+              <div class="main-slider-background-wrapper">
                 <h3 class="slide-item-title">
                   Дрели
                 </h3>
@@ -108,14 +119,12 @@
               <a class="button main-slider-button" href="catalog.html">Открыть каталог</a>
             </li>
           </ul>
-          <form>
-            <input class="main-slider-toggles" type="radio" id="main-slider-toggle-1" name="main-slider-toggle" checked>
-            <label class="visually-hidden" for="main-slider-toggle-1">Первый слайд</label>
-            <input class="main-slider-toggles" type="radio" id="main-slider-toggle-2" name="main-slider-toggle">
-            <label class="visually-hidden" for="main-slider-toggle-2">Второй слайд</label>
-            <button class="main-slider-buttons slider-button-prew" type="button">Предыдущий слайд</button>
-            <button class="main-slider-buttons slider-button-next" type="button">Следующий слайд</button>
-          </form>
+          <div class="main-slider-controls">
+            <button class="main-slider-control main-slider-control-current" type="button" aria-label="Первый слайд"></button>
+            <button class="main-slider-control" type="button" aria-label="Второй слайд"></button>
+          </div>
+          <button class="switch-control switch-control-prew" type="button" aria-label="Предыдущий слайд"></button>
+          <button class="switch-control switch-control-next" type="button" aria-label="Следующий слайд"></button>
         </div>
       </section>
       <section class="popular-products container-center">
@@ -125,8 +134,10 @@
         </div>
         <ul class="popular-products-list products-list">
           <li class="popular-product-item product-item">
-            <img class="product-item-image" src="img/product-BFG-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-            <h3 class="product-item-title">Перфоратор BOSCH BFG 9000</h3>
+            <figure class="product-image-cover">
+              <img class="product-item-image" src="img/product-BFG-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+              <figcaption><h3 class="product-item-title">Перфоратор BOSCH BFG 9000</h3></figcaption>
+            </figure>
             <span class="old-price">32500 Р.</span>
             <a class="button product-button" href="#">25500 Р.</a>
             <div class="product-action">
@@ -136,8 +147,10 @@
           </li>
           <li class="popular-product-item product-item product-new">
             <span class="visually-hidden">Новинка на нашем сайте!</span>
-            <img class="product-item-image" src="img/product-BFG-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-            <h3 class="product-item-title">Перфоратор BOSCH BFG 3000</h3>
+            <figure class="product-image-cover">
+              <img class="product-item-image" src="img/product-BFG-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+              <figcaption><h3 class="product-item-title">Перфоратор BOSCH BFG 3000</h3></figcaption>
+            </figure>
             <span class="old-price">22500 Р.</span>
             <a class="button product-button" href="#">15500 Р.</a>
             <div class="product-action">
@@ -146,8 +159,10 @@
             </div>
           </li>
           <li class="popular-product-item product-item">
-            <img class="product-item-image" src="img/product-BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-            <h3 class="product-item-title">Перфоратор BOSCH BFG 6000</h3>
+            <figure figure class="product-image-cover">
+              <img class="product-item-image" src="img/product-BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+              <figcaption><h3 class="product-item-title">Перфоратор BOSCH BFG 6000</h3></figcaption>
+            </figure>
             <span class="old-price">30500 Р.</span>
             <a class="button product-button" href="#">25500 Р.</a>
             <div class="product-action">
@@ -157,8 +172,10 @@
           </li>
           <li class="popular-product-item product-item product-new">
             <span class="visually-hidden">Новинка на нашем сайте!</span>
-            <img class="product-item-image" src="img/product-BFG-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-            <h3 class="product-item-title">Перфоратор BOSCH BFG 2000</h3>
+            <figure figure class="product-image-cover">
+              <img class="product-item-image" src="img/product-BFG-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+              <figcaption><h3 class="product-item-title">Перфоратор BOSCH BFG 2000</h3></figcaption>
+            </figure>
             <a class="button product-button" href="#">12500 Р.</a>
             <div class="product-action">
               <a class="button product-action-button-buy" href="#">Купить</a>
@@ -210,7 +227,7 @@
           </li>
           <li class="firms-item">
             <a class="firms-link" href="#">
-              <img class="firms-image" src="img/firms-metabo.png" width="204" height="69" alt="Metabo">
+              <img class="firms-image" src="img/firms-metabo.png" width="206" height="73" alt="Metabo">
             </a>
           </li>
         </ul>
@@ -221,40 +238,18 @@
           <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами!<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             <div class="services-slider">
-              <!-- <ul class="services-slider-buttons">
-                <li class="services-slider-button">
-                  <label class="services-slider-button-title slider-button-title-1 services-slider-button-title-checked" for="services-slide-control-1">Доставка</label>
-                  <input class="visually-hidden services-button-toggle-1" type="radio" id="services-slide-control-1" name="services-slide-control" checked>
-                </li>
-                <li class="services-slider-button">
-                  <label class="services-slider-button-title slider-button-title-2" for="services-slide-control-2">Гарантия</label>
-                  <input class="visually-hidden services-button-toggle-2" type="radio" id="services-slide-control-2" name="services-slide-control">
-                </li>
-                <li class="services-slider-button">
-                  <label class="services-slider-button-title slider-button-title-3" for="services-slide-control-3">Кредит</label>
-                  <input class="visually-hidden services-button-toggle-3" type="radio" id="services-slide-control-3" name="services-slide-control">
-                </li>
-              </ul> -->
-              <!-- ИЗМЕНИЛ РАЗМЕТКУ, ИНАЧЕ НЕ ПОЛУЧАЛОСЬ ЗАСТИЛИЗОВАТЬ,
-                ПОТРАТИЛ ДВА ЧАСА ЧТО-БЫ НАЙТИ РЕШЕНИЕ,
-                НАДЕЮСЬ ТАК МОЖНО ДЕЛАТЬ. ПИШУ С ЗАЖАТЫМ ШИФТОМ -->
-              <form>
-                <input class="visually-hidden services-button-toggle-1" type="radio" id="services-slide-control-1" name="services-slide-control" checked>
-                <input class="visually-hidden services-button-toggle-2" type="radio" id="services-slide-control-2" name="services-slide-control">
-                <input class="visually-hidden services-button-toggle-3" type="radio" id="services-slide-control-3" name="services-slide-control">
-                <div class="services-slider-buttons">
-                  <label class="services-slider-button-title services-slider-button-title-1 services-slider-button-title-checked" for="services-slide-control-1">Доставка</label>
-                  <label class="services-slider-button-title services-slider-button-title-2" for="services-slide-control-2">Гарантия</label>
-                  <label class="services-slider-button-title services-slider-button-title-3" for="services-slide-control-3">Кредит</label>
-                </div>
-              </form>
+              <div class="services-slider-controls">
+                <button class="services-slider-control services-slider-control-current" type="button">Доставка</button>
+                <button class="services-slider-control" type="button">Гарантия</button>
+                <button class="services-slider-control" type="button">Кредит</button>
+              </div>
               <ul class="services-slider-discription-list">
-                <li class="services-slider-discription-item">
+                <li class="services-slider-discription-item services-slider-current">
                   <h3 class="services-slider-title">Доставка</h3>
                   <p class="services-slider-text">Мы с удовольствием доставим ваш товар прямо<br>
                     к вашему подъезду совершенно бесплатно!</p>
                   <p class="services-slider-optional-text">Ведь мы неплохо заработаем,<br>
-                    поднимая его на ваш на этаж!</p>
+                    поднимая его на ваш этаж!</p>
                 </li>
                 <li class="services-slider-discription-item">
                   <h3 class="services-slider-title">Гарантия</h3>
@@ -279,7 +274,7 @@
           <h2 class="about-title">Компания «Техномарт»</h2>
           <p class="about-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
           </p>
-          <p class="about-delivery-text">Мы можем доставить ваш товар в самые отдаленные точки России!
+          <p class="about-delivery-text">Мы можем доставить ваш товар в самые отдаленные точки России!<br>
                 Техномарт работает со многими транспортными компаниями:</p>
           <ul class="delivery-companies-list">
             <li class="delivery-company-item">Деловые линии</li>
@@ -303,7 +298,7 @@
           <a class="footer-logo logo">
             <img src="img/footer-logo.svg" width="138" height="23" alt="Логотип интернет-магазина «Техномарт»">
           </a>
-          <div> <!--Что-бы ссылка телефона не растягивалась на родителя-->
+          <div class="footer-contacts-wrapper">
             <p class="footer-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <a class="footer-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           </div>
@@ -326,17 +321,42 @@
       </div>
       <div class="footer-bottom-wrapper">
         <div class="container-center">
-          <p class="footer-copyright">&copy; 2010–2019 Компания «Техномарт» Все права защищены</p>
+          <p class="footer-copyright">&copy; 2010–2019 Компания «Техномарт»<br> Все права защищены</p>
           <ul class="social-list">
-            <li class="social-list-item"><a href="#">Вконтакте</a></li>
-            <li class="social-list-item"><a href="#">Facebook</a></li>
-            <li class="social-list-item"><a href="#">Instagram</a></li>
+            <li class="social-list-item">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg width="27" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.14 12.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.72.74-5.25 1.6-2.15 2.24-3.47 2.04-4.03-.2-.53-1.37-.4-1.37-.4l-3.91.03c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.14-2.72 2.96-.66-.44-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0012.5 1c-1.39-.02-2.57 0-3.24.33-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.53.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.93-1.4-2.93s-.1-.28-.32-.44c-.25-.18-.6-.24-.6-.24l-3.71.02s-.56.02-.76.27c-.19.21-.02.66-.02.66s2.9 6.88 6.2 10.35c3.02 3.18 6.46 2.97 6.46 2.97h1.55s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Facebook</span>
+                <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Instagram</span>
+                <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.18a6.5 6.5 0 1012.64 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/>
+                </svg>
+              </a>
+            </li>
           </ul>
           <dl class="about-developer">
-            <dt class="about-developer-term">Обратная связь:</dt>
-            <dd class="about-developer-discription"><a class="about-developer-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></dd>
-            <dt class="about-developer-term">Разработано —</dt>
-            <dd class="about-developer-discription"><a class="about-developer-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></dd>
+            <div class="about-developer-wrapper">
+              <dt class="about-developer-term">Обратная связь:</dt>
+              <dd class="about-developer-discription"><a class="about-developer-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></dd>
+            </div>
+            <div class="about-developer-wrapper">
+              <dt class="about-developer-term">Разработано —</dt>
+              <dd class="about-developer-discription"><a class="about-developer-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></dd>
+            </div>
           </dl>
         </div>
       </div>
