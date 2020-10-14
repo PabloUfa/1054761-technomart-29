@@ -9,24 +9,23 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-body">
-    <header class="main-header">
+  <body class="page-body inner-page">
+    <header class="main-header catalog-header">
       <nav class="main-nav">
         <div class="site-nav-top">
           <div class="container-center">
             <a class="main-header-logo logo" href="index.html">
               <img src="img/header-logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
             </a>
-            <form class="header-search" action="#" method="POST">
-              <label class="visually-hidden" for="site-search">Поиск товаров по сайту</label>
-              <input class="main-search" type="search" name="site-search" id="site-search" placeholder="Поиск:">
-              <svg class="search-icon" width="17" height="17">
-                <path class="search-icon-action"  fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff"/>
-              </svg>
-            </form>
-            <a href="#" class="order-info-link catalog-bookmarks-link">Закладки: 0</a>
-            <a href="#" class="order-info-link catalog-cart-link">Корзина: 10</a>
-            <a href="#" class="order-info-link order-link">Оформить заказ</a>
+            <div class="header-search">
+              <form action="#" method="POST" aria-label="Поиск товаров по сайту">
+                <input class="main-search" type="search" name="site-search" id="site-search" placeholder="Поиск:">
+                <label class="main-search-icon" for="site-search"></label>
+              </form>
+            </div>
+            <a href="#" class="order-info-link bookmarks-link catalog-bookmarks-link">Закладки: 0</a>
+            <a href="#" class="order-info-link catalog-cart-link cart-link">Корзина: 10</a>
+            <a href="#" class="order-info-link catalog-order-link order-link">Оформить заказ</a>
           </div>
         </div>
         <div class="background-wrapper">
@@ -78,7 +77,7 @@
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link breadcrumbs-link-index" href="index.html">
-              <span class="visually-hidden">Главная</span>
+              <span class="visually-hidden">Главная страница</span>
               <svg width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="breadcrumbs-index-icon" d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/>
                 <path class="breadcrumbs-index-icon" d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/>
@@ -92,9 +91,71 @@
         <div class="catalog-title-wrapper">
           <h1 class="catalog-title">Перфораторы</h1>
         </div>
-        <section class="catalog-filter">
-          <h2>Фильтр:</h2>
-          <!-- Здесь будет форма фильтра -->
+        <section class="product-filter">
+          <div class="product-filter-wrapper">
+            <h2 class="product-filter-title">Фильтр:</h2>
+          </div>
+          <form method="get" action="https://echo.htmlacademy.ru" target="_blank">
+            <fieldset class="product-filter-price">
+              <legend class="product-filter-subtitle">Цена:</legend>
+              <div class="product-filter-range">
+                <div class="product-filter-range-controls">
+                  <div class="range-controls-scale">
+                    <div class="range-controls-bar" style="width: 84%; margin-left: 0%;"></div>
+                  </div>
+                  <div class="product-filter-range-toggle product-filter-range-toggle-min" tabindex="0" style="left: 9%"></div>
+                  <div class="product-filter-range-toggle product-filter-range-toggle-max" tabindex="0" style="left: 73%"></div>
+                </div>
+                <ul class="product-filter-price-controls">
+                  <li class="product-filter-price-item" aria-label="Цена от">
+                    <input class="product-filter-price-placeholder" type="number" name="min-price" value="0">
+                  </li>
+                  <li class="product-filter-price-item" aria-label="Цена до">
+                    <input class="product-filter-price-placeholder" type="number" name="max-price" value="30000">
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="product-filter-firms">
+              <legend class="product-filter-subtitle">Производители:</legend>
+              <ul class="product-filter-firms-list">
+                <li class="product-filter-firms-item">
+                  <input class="visually-hidden product-filter-input-checkbox product-filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <label class="product-filter-label product-filter-firms-label" for="filter-bosch">Bosch</label>
+                </li>
+                <li class="product-filter-firms-item">
+                  <input class="visually-hidden product-filter-input-checkbox product-filter-input" type="checkbox" name="interskol" id="filter-interskol">
+                  <label class="product-filter-label product-filter-firms-label" for="filter-interskol">Интерскол</label>
+                </li>
+                <li class="product-filter-firms-item">
+                  <input class="visually-hidden product-filter-input-checkbox product-filter-input" type="checkbox" name="makita" id="filter-makita" checked>
+                  <label class="product-filter-label product-filter-firms-label" for="filter-makita">Makita</label>
+                </li>
+                <li class="product-filter-firms-item">
+                  <input class="visually-hidden product-filter-input-checkbox product-filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <label class="product-filter-label product-filter-firms-label" for="filter-dewalt">Dewalt</label>
+                </li>
+                <li class="product-filter-firms-item">
+                  <input class="visually-hidden product-filter-input-checkbox product-filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <label class="product-filter-label product-filter-firms-label" for="filter-hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="product-filter-modes">
+              <legend class="product-filter-subtitle">Питание:</legend>
+              <ul class="product-filter-modes-list">
+                <li class="product-filter-modes-item">
+                  <input class="visually-hidden product-filter-input-radio product-filter-input" type="radio" name="modes-group" value="battery" id="filter-battery" checked>
+                  <label class="product-filter-label product-filter-modes-label" for="filter-battery">Аккумуляторные</label>
+                </li>
+                <li class="product-filter-modes-item">
+                  <input class="visually-hidden product-filter-input-radio product-filter-input" type="radio" name="modes-group" value="electricity" id="filter-electricity">
+                  <label class="product-filter-label product-filter-modes-label" for="filter-electricity">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="product-filter-button button" type="submit">Показать</button>
+          </form>
         </section>
         <section class="sorting-filter">
           <h2 class="sorting-filter-title">Сортировка:</h2>
@@ -316,10 +377,13 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-product-in-cart">
-      <h2 class="modal-product-in-cart-title">Товар добавлен в корзину!</h2>
-      <!-- Здесь будет модалка добавления в корзину -->
-      <button class="modal-close" type="button">Закрыть</button>
+    <section class="modal modal-in-cart">
+      <h2 class="modal-in-cart-title">Товар добавлен в корзину!</h2>
+      <div class="modal-in-cart-buttons-wrapper">
+        <a href="#" class="button modal-in-cart-button">Оформить заказ</a>
+        <a href="#" class="button modal-in-cart-button modal-in-cart-button-keep-shopping">Продолжить покупки</a>
+      </div>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
   </body>
 </html>
