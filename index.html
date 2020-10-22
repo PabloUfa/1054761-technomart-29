@@ -286,13 +286,15 @@
           <h2 class="contacts-title">Контакты</h2>
           <p class="contacts-text">Вы можете забрать товар сами,<br>
               заехав в наш офис:</p>
-            <img class="contacts-map" src="img/map.jpg" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            <a class="map-link" href="map.html">
+              <img class="contacts-map" src="img/map.jpg" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            </a>
             <a  class="button contacts-button" href="#">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
     <footer class="main-footer">
-      <div class="footer-top-grid-wrapper container-center">
+      <div class="footer-top-flex-wrapper container-center">
         <div class="footer-contacts-logo-wrapper">
           <a class="footer-logo logo">
             <img src="img/footer-logo.svg" width="138" height="23" alt="Логотип интернет-магазина «Техномарт»">
@@ -367,11 +369,11 @@
           <div class="write-us-form-item-top-wrapper">
             <p class="write-us-form-item">
               <label class="write-us-form-label" for="losted-person-name">Ваше имя:</label>
-              <input class="write-us-form-input" id="losted-person-name" type="text" name="name" placeholder="Имя Фамилия">
+              <input class="write-us-form-input write-us-form-name" id="losted-person-name" type="text" name="name" placeholder="Имя Фамилия">
             </p>
             <p class="write-us-form-item">
               <label class="write-us-form-label" for="losted-person-email">Ваш e-mail:</label>
-              <input class="write-us-form-input" id="losted-person-email" type="email" name="email" placeholder="email@example.com">
+              <input class="write-us-form-input write-us-form-mail" id="losted-person-email" type="email" name="email" placeholder="email@example.com">
             </p>
           </div>
           <p class="write-us-form-item write-us-form-item-message">
@@ -390,5 +392,7 @@
       <iframe class="modal-action-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="943" height="445" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
+    <script src="js/map.js"></script>
+    <script src="js/write-us.js"></script>
   </body>
 </html>

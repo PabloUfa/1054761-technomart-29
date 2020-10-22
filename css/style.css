@@ -104,6 +104,7 @@ img {
   width: 70px;
   height: 70px;
   background: url(../img/new-mask.svg) no-repeat 0 0;
+  z-index: -1;
 }
 
 .button {
@@ -726,6 +727,7 @@ img {
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .main-slider .switch-control-prew {
@@ -915,7 +917,6 @@ img {
 .product-action-button-buy {
   position: relative;
   display: block;
-  z-index: 1;
   margin-bottom: 10px;
   padding: 10px 42px 10px 54px;
   width: 135px;
@@ -2422,6 +2423,8 @@ img {
   left: 195px;
   width: 943px;
   height: 445px;
+  background-image: url(../img/big-map.jpg);
+  background-size: 943px 445px no-repeat;
 }
 
 .modal-action-map {
@@ -2501,6 +2504,59 @@ img {
 .modal-in-cart-button-keep-shopping:focus {
   background-color: var(--background-darkest);
   color: var(--basic-white);
+}
+
+/* Show-madal */
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 
