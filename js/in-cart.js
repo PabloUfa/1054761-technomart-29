@@ -3,11 +3,6 @@ const productBuyPopup = document.querySelector(".modal-in-cart");
 const productBuyClose = productBuyPopup.querySelector(".modal-close");
 const keepShopping = productBuyPopup.querySelector(".modal-in-cart-button-keep-shopping");
 
-// productBuyLink.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   productBuyPopup.classList.add("modal-show");
-// });
-
 for (let i = 0; i < productBuyLink.length; i++)
   productBuyLink[i].addEventListener("click", function(evt) {
         evt.preventDefault(),
