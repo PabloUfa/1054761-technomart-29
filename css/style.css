@@ -123,6 +123,7 @@ img {
   font-weight: 400;
   color: var(--basic-white);
   text-align: center;
+  vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--basic-red);
 }
@@ -764,7 +765,6 @@ img {
 }
 
 .popular-products-title {
-  display: inline-block;
   margin: 0;
   padding-top: 29px;
   padding-bottom: 30px;
@@ -985,7 +985,6 @@ img {
 }
 
 .popular-firms-title {
-  display: inline-block;
   margin: 0;
   padding-top: 30px;
   padding-bottom: 29px;
@@ -1207,7 +1206,7 @@ img {
 }
 
 .services-slider-optional-text {
-  line-height: 23px;
+  line-height: 24px;
   margin: 0;
 }
 
@@ -2299,6 +2298,7 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
+  margin:  0 auto;
   color: var(--basic-black);
   background-color: var(--basic-white);
   border-top: 7px solid var(--special-modal-red);
@@ -2352,7 +2352,6 @@ img {
 .modal-write-us {
   display: none;
   top: 31px;
-  left: 357px;
   bottom: auto;
   width: 620px;
 }
@@ -2431,7 +2430,6 @@ img {
 .modal-map {
   display: none;
   top: 31px;
-  left: 195px;
   width: 943px;
   height: 445px;
   background-image: url(../img/big-map.jpg);
@@ -2452,7 +2450,6 @@ img {
 .modal-in-cart {
   display: none;
   top: 31px;
-  left: 381px;
   width: 620px;
   height: 282px;
   background-color: var(--basic-white);
