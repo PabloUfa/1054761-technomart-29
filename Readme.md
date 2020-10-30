@@ -3,6 +3,8 @@
 * Студент: [Павел Рахманкулов](https://up.htmlacademy.ru/htmlcss/29/user/1054761).
 * Наставник: [Анастасия Ничипорчук](https://htmlacademy.ru/profile/id612797).
 
+
+https://pabloufa.github.io/1054761-technomart-29/
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
